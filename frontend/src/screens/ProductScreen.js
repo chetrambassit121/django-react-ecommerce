@@ -1,3 +1,5 @@
+// ............. this screen will display the product details 
+
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Row, Col, Image, ListGroup, Button, Card, ListGroupItem} from 'react-bootstrap'
