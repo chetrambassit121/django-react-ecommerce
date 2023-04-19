@@ -1,3 +1,5 @@
+
+
 import React, {useState, useEffect} from 'react'
 // import products from '../products'
 import { Row, Col } from 'react-bootstrap'
@@ -13,7 +15,7 @@ function HomeScreen() {
   // its a arrow function => . 
   useEffect(() => {
     async function fetchProducts(){                                                     // creating the async function ... 
-      const {data} = await axios.get('http://127.0.0.1:8000/api/products/')               // constant data . axios getting the url 
+      const {data} = await axios.get('/api/products/')               // constant data . awaiting for axios getting the url 
       setProducts(data)                         
     }
     fetchProducts()                                       
