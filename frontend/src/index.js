@@ -4,12 +4,54 @@ import './index.css';
 import App from './App';
 import './bootstrap.min.css'
 // import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux'
+import store from './store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
 );
+
+
+
+
+// applied redux . our store.js was created and connected to react
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import './index.css';
+// import App from './App';
+// import './bootstrap.min.css'
+// // import reportWebVitals from './reportWebVitals';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 
 
