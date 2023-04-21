@@ -2,7 +2,7 @@
 
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {Row, Col, Image, ListGroup, Button, Card, Form, ListGroupItem} from 'react-bootstrap'
+import {Row, Col, Image, ListGroup, Button, Card, Form} from 'react-bootstrap'
 import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
@@ -56,26 +56,26 @@ function ProductScreen({ match, history }) {
               <Col md={3}>
                 <Card>
                   <ListGroup variant='flush'>
-                    <ListGroupItem>
+                    <ListGroup.Item>
                       <Row>
                         <Col>Price:</Col>
                         <Col>
                           <strong>${product.price}</strong>
                         </Col>
                       </Row>
-                    </ListGroupItem>
+                    </ListGroup.Item>
 
-                    <ListGroupItem>
+                    <ListGroup.Item>
                       <Row>
                         <Col>Status</Col>
                         <Col>
                           {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
                         </Col>
                       </Row>
-                    </ListGroupItem>
+                    </ListGroup.Item>
 
                     {product.countInStock > 0 && (
-                      <ListGroupItem>
+                      <ListGroup.Item>
                         <Row>
                           <Col>Qty</Col>
                           <Col xs='auto' className='my-1'>
@@ -96,12 +96,12 @@ function ProductScreen({ match, history }) {
                             </Form.Control>
                           </Col>
                         </Row>
-                      </ListGroupItem>
+                      </ListGroup.Item>
                     )}
 
-                    <ListGroupItem>
+                    <ListGroup.Item>
                       <Button onClick={addToCartHandler} className='btn-block' disabled={product.countInStock == 0} type='button'>Add to Cart</Button>
-                    </ListGroupItem>
+                    </ListGroup.Item>
                   </ListGroup>
                 </Card>
               </Col>
