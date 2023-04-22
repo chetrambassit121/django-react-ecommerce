@@ -5,7 +5,38 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Product
 from .serializers import ProductSerializer 
-# Create your views here.
+
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    #MY CUSTOME CODING
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        
+        data['username'] = self.user.username
+        data['email'] = self.user.email
+
+        # serializer = UserSerializerWithToken(self.user).data
+        # for k, v in serializer.items():
+        #     data[k] = v
+
+        return data
+    
+    
+    # ORIGINAL CODING FOR THIS CLASS
+    # @classmethod
+    # def get_token(cls, user):
+    #     token = super().get_token(user)
+    #     token['username'] = user.username
+    #     token['message'] = 'hello world'
+    #     return token
+    
+    
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
+
 
 @api_view(['GET'])
 def getRoutes(request):
