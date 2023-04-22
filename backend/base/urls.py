@@ -5,8 +5,8 @@ from . import views
 # )
 
 urlpatterns = [
-    path('', views.getRoutes, name="routes"),
     
+    path('users/register/', views.registerUser, name='register'),
     path('users/', views.getUsers, name="users"),
     path('users/profile', views.getUserProfile, name="users-profile"),
     
