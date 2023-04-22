@@ -7,6 +7,7 @@ from . import views
 urlpatterns = [
     path('', views.getRoutes, name="routes"),
     
+    path('users/', views.getUsers, name="users"),
     path('users/profile', views.getUserProfile, name="users-profile"),
     
     
