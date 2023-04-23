@@ -6,6 +6,9 @@ import './bootstrap.min.css'
 // import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import store from './store'
+// import { configureStore } from "@reduxjs/toolkit";
+
+// const store = configureStore({ allReducers });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
