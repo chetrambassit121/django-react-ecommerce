@@ -32,10 +32,9 @@ function PlaceOrderScreen({ history }) {
             history.push(`/order/${order._id}`)
             dispatch({ type: ORDER_CREATE_RESET })
         }
-    }, [dispatch, success, history])
+    }, [success, history])
 
     const placeOrder = () => {
-        
         dispatch(createOrder({
             orderItems: cart.cartItems,
             shippingAddress: cart.shippingAddress,

@@ -3,6 +3,7 @@ import {
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAIL,
+
     USER_LOGOUT,
 
     USER_REGISTER_REQUEST,
@@ -28,17 +29,13 @@ import {
     USER_DELETE_SUCCESS,
     USER_DELETE_FAIL,
 
-
     USER_UPDATE_REQUEST,
     USER_UPDATE_SUCCESS,
     USER_UPDATE_FAIL,
 
-
-
 } from '../constants/userConstants'
 
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
-
 
 export const login = (email, password) => async (dispatch) => {
     try {

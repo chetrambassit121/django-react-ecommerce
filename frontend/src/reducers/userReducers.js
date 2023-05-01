@@ -28,11 +28,11 @@ import {
     USER_DELETE_SUCCESS,
     USER_DELETE_FAIL,
 
-    
     USER_UPDATE_REQUEST,
     USER_UPDATE_SUCCESS,
     USER_UPDATE_FAIL,
     USER_UPDATE_RESET,
+
 } from '../constants/userConstants'
 
 
@@ -76,6 +76,7 @@ export const userRegisterReducer = (state = {}, action) => {
 }
 
 
+
 export const userDetailsReducer = (state = { user: {} }, action) => {
     switch (action.type) {
         case USER_DETAILS_REQUEST:
@@ -89,6 +90,7 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
 
         case USER_DETAILS_RESET:
             return { user: {} }
+
 
         default:
             return state
