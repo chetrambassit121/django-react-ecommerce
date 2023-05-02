@@ -215,7 +215,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 #AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo'
 
 
-# if os.getcwd() == '/app':
-#     DEBUG = False
+if os.getcwd() == '/app':
+    DEBUG = False
     
 django_on_heroku.settings(locals())
