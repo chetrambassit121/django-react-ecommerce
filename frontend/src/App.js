@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap'
 import { HashRouter as Router, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
@@ -18,8 +19,16 @@ import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 
+import icon from './images/my_picture.jpg'
+
+
+
 
 function App() {
+  useEffect(() => {
+    const favicon = document.getElementById('favicon');
+    favicon.setAttribute('href', icon);
+  }, []);
   return (
     <Router>
       <Header />
