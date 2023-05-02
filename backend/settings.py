@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+import django_on_heroku  
+import environ
+import dj_database_url 
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'sc%oco$+(3$z$at=z4j)#l-+ym)+_b11389mdt2^12m$bf63%@'
+# SECRET_KEY = 'sc%oco$+(3$z$at=z4j)#l-+ym)+_b11389mdt2^12m$bf63%@'
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # "whitenoise.runserver_nostatic",    
     'rest_framework',
     'corsheaders',
     'storages',
@@ -127,6 +133,13 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(
+    conn_max_age=500
+)  
+DATABASES["default"].update(
+    db_from_env
+)
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # DATABASES = {
@@ -202,5 +215,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 #AWS_STORAGE_BUCKET_NAME = 'proshop-bucket-demo'
 
 
-if os.getcwd() == '/app':
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     DEBUG = False
+    
+django_on_heroku.settings(locals())
