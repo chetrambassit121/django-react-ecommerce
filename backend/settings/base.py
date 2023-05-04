@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # "whitenoise.runserver_nostatic",    
+    "whitenoise.runserver_nostatic",    
     'storages',
     "django_extensions",
     'rest_framework',
@@ -197,7 +197,7 @@ USE_TZ = True
 #     BASE_DIR / 'static',
 #     BASE_DIR / 'frontend/build/static'
 # ]
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 
 
 # MEDIA_ROOT = BASE_DIR / 'static/images'
