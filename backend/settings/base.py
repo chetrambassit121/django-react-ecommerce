@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -45,10 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # "whitenoise.runserver_nostatic",    
+    'storages',
+    "django_extensions",
     'rest_framework',
     'corsheaders',
-    'storages',
-
     'base.apps.BaseConfig',
 ]
 
