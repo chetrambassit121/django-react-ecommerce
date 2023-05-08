@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
-    "whitenoise.runserver_nostatic",    
     'storages',
     "django_extensions",
     'rest_framework',
@@ -89,9 +89,8 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -186,6 +185,26 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+
+
+
+# STATIC_URL = '/static/'
+# # Place static in the same location as webpack build files
+# STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+# STATICFILES_DIRS = []
+
+# # If you want to serve user uploaded files add these settings
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+
+
+
 '''media files'''
 MEDIA_URL = "/media/"  
 MEDIA_ROOT = os.path.join(
@@ -204,7 +223,7 @@ STATIC_ROOT = os.path.join(
 STATICFILES_DIRS = [  
     os.path.join(
         BASE_DIR, "static",
-        # BASE_DIR, 'frontend/build/static'
+        BASE_DIR, 'frontend/build/static'
         
     ),  
 ]
