@@ -26,7 +26,7 @@ function HomeScreen({ history }) {
             {!keyword && <ProductCarousel />}
 
             <h1>Latest Products</h1>
-            {/* <img src="images/my_picture.jpg" width="100px" height="100px"></img> */}
+            <img src="images/my_picture.jpg" width="100px" height="100px"></img>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     :
