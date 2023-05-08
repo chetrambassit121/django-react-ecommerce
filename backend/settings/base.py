@@ -203,8 +203,8 @@ STATIC_ROOT = os.path.join(
 )   
 STATICFILES_DIRS = [  
     os.path.join(
-        # BASE_DIR, "static",
-        BASE_DIR, 'frontend/build/static'
+        BASE_DIR, "static",
+        # BASE_DIR, 'frontend/build/static'
         
     ),  
 ]
