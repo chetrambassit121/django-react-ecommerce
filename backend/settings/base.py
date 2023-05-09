@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',    
+    # 'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
     'storages',
     "django_extensions",
@@ -240,7 +240,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
  
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  
 
 
 # Static files (CSS, JavaScript, Images)
