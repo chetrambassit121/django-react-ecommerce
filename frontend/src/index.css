@@ -12,12 +12,9 @@
   opacity: 0.85;
 }
 
-.trans1 {
-  opacity: 1 !important;
-}
 
 header {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 main{
