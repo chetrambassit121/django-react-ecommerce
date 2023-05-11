@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', 'chets-animeshop.herokuapp.com']
 
@@ -242,8 +242,8 @@ AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
 # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 
-if os.getcwd() == '/app':
-    DEBUG = True
+# if os.getcwd() == '/app':
+#     DEBUG = True
     
 django_on_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
