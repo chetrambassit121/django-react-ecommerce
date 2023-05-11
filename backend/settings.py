@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', 'chets-animeshop.herokuapp.com']
 
@@ -206,7 +206,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles' 
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -242,8 +242,8 @@ AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
 # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 
-# if os.getcwd() == '/app':
-#     DEBUG = True
+if os.getcwd() == '/app':
+    DEBUG = False
     
 django_on_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
