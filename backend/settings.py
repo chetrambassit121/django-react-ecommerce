@@ -243,7 +243,7 @@ AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
 
 
 if os.getcwd() == '/app':
-    DEBUG = True
+    DEBUG = False
     
 django_on_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
