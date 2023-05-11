@@ -54,7 +54,7 @@ function ProductListScreen({ history, match }) {
     }
 
     return (
-        <div>
+        <div class="listtab">
             <Row className='align-items-center'>
                 <Col>
                     <h1>Products</h1>
@@ -79,7 +79,7 @@ function ProductListScreen({ history, match }) {
                 : error
                     ? (<Message variant='danger'>{error}</Message>)
                     : (
-                        <div>
+                        <div> 
                             <Table striped bordered hover responsive className='table-sm'>
                                 <thead>
                                     <tr>

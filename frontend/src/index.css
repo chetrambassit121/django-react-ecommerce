@@ -1,20 +1,28 @@
 
 
 #myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: fixed;
-  /* right: 0; */
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
-  width: 100%;
-  min-height: 100%;
+  z-index: -1;
 }
 
 .trans {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
+.listtable {
+  z-index: 1;
+}
 
 header {
   opacity: 1;
+  
 }
 
 main{
@@ -67,6 +75,7 @@ h3{
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+  /* opacity: 1 !important; */
 }
 .carousel a {
   margin: 0 auto;
