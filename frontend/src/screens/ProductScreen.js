@@ -64,7 +64,7 @@ function ProductScreen({ match, history }) {
                         <div>
                             <Row>
                                 <Col md={6}>
-                                    <Image src={product.image} alt={product.name} fluid />
+                                    <img class="productimg" src={product.image} alt={product.name}  />
                                 </Col>
 
 

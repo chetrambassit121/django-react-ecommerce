@@ -25,7 +25,7 @@ function HomeScreen({ history }) {
         <div>
             {!keyword && <ProductCarousel />}
 
-            <h1>Latest Products</h1>
+            <h1 class="center">Latest Products</h1>
             {/* <div>
                 <img src="images/my_picture.jpg" width="100px" height="100px"/>
             </div> */}

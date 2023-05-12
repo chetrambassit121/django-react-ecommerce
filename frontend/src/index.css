@@ -1,4 +1,6 @@
-
+body {
+  height: 2000px;
+}
 
 #myVideo {
   width: 100vw;
@@ -33,24 +35,31 @@ main{
 h1{
   font-size: 1.8rem;
   padding:1rem 0;
+  color: white !important;
 }
 
 h2{
   font-size: 1.4rem;
   padding:0.5rem 0;
+  color: white !important;
+
 }
 
 h3{
-    padding:1rem 0;
+  padding:1rem 0;
+  /* color: white !important;   */
 }
 
+.center {
+  text-align:center;
+}
 .rating span{
   margin:0.1rem;
 }
 
-.productcard {
-  min-height: 430px;
-}
+/* .productcard {
+  min-height: 450px;
+} */
 
 /* carousel */
 .carousel-item-next,
@@ -65,6 +74,10 @@ h3{
 
 .carousel-caption h4 {
   color: #fff;
+}
+
+.productimg {
+  min-width:100%;max-width:100%;max-height:600px;min-height:600px;
 }
 
 .carousel img {

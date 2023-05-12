@@ -7,7 +7,7 @@ function Product({ product }) {
     return (
         <Card className="my-3 p-3 rounded productcard">
             <Link to={`/product/${product._id}`}>
-                <Card.Img src={product.image} min-height="200px !important" max-height="200px !important"/>
+                <Card.Img src={product.image} />
             </Link>
 
             <Card.Body>
@@ -32,3 +32,15 @@ function Product({ product }) {
 }
 
 export default Product
+
+
+// demon slayer
+// attack on titan
+// DBz
+// One Piece
+// Naruto
+// Bleach
+// FMA
+// Code Gease
+// Eureka 7
+// Wolfs rain
