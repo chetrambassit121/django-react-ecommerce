@@ -27,6 +27,13 @@ header {
   
 }
 
+footer {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
 main{
     
   min-height: 80vh;
