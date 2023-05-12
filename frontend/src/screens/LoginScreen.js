@@ -32,7 +32,7 @@ function LoginScreen({ location, history }) {
     return (
         <FormContainer>
             <h1>Sign In</h1>
-            <h4>Sign in as an Admin, create and edit products</h4>
+            <h4>Sign in as an Admin, create and edit products </h4>
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
@@ -42,7 +42,8 @@ function LoginScreen({ location, history }) {
                     <Form.Control
                         type='email'
                         placeholder='Enter Email'
-                        value="chetrambassit101@gmail.com"
+                        // value="chetrambassit101@gmail.com"
+                        value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
                     </Form.Control>
@@ -54,7 +55,7 @@ function LoginScreen({ location, history }) {
                     <Form.Control
                         type='password'
                         placeholder='Enter Password'
-                        value="kitty121"
+                        value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
                     </Form.Control>
