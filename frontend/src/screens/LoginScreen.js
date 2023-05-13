@@ -42,8 +42,8 @@ function LoginScreen({ location, history }) {
                     <Form.Control
                         type='email'
                         placeholder='Enter Email'
-                        // value="chetrambassit101@gmail.com"
-                        value={email}
+                        value="chetrambassit101@gmail.com"
+                        // value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
                     </Form.Control>
@@ -55,7 +55,8 @@ function LoginScreen({ location, history }) {
                     <Form.Control
                         type='password'
                         placeholder='Enter Password'
-                        value={password}
+                        value="kitty121"
+                        // value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
                     </Form.Control>

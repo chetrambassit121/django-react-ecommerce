@@ -1,5 +1,6 @@
 body {
   height: 2000px;
+  /* height: 100%; */
 }
 
 #myVideo {
@@ -27,11 +28,14 @@ header {
   
 }
 
+
+
 footer {
-  /* position: absolute; */
-  bottom: 0;
+  /* position: fixed; */
+  margin-top: 1000px;
   left: 0;
-  text-align: center;
+  bottom: 0;
+  width: 100%;
 }
 
 main{
