@@ -43,6 +43,10 @@ main{
   min-height: 80vh;
 }
 
+Label {
+  color: white !important;
+}
+
 h1{
   font-size: 1.8rem;
   padding:1rem 0;
