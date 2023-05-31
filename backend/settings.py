@@ -32,7 +32,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', 'chets-animeshop.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', 'chets-animeshop.herokuapp.com', '0.0.0.0']
 
 
 # Application definition
